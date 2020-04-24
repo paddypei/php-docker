@@ -406,7 +406,7 @@ RUN cd ${SRC_DIR} \
 
 ENV swooleVersion 4.4.12
 RUN cd ${SRC_DIR} \
-    && wget -q -O swoole-${swooleVersion}.tar.gz https://github.com/swoole/swoole-src/archive/v${swooleVersion}.tar.gz \
+    && wget -q -O swoole-${swooleVersion}.tar.gz https://codeload.github.com/swoole/swoole-src/archive/v${swooleVersion}.tar.gz \
     && tar zxf swoole-${swooleVersion}.tar.gz \
     && cd swoole-src-${swooleVersion}/ \
     && ${PHP_INSTALL_DIR}/bin/phpize \
