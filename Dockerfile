@@ -414,8 +414,7 @@ RUN cd ${SRC_DIR} \
     && make clean 1>/dev/null \
     && make 1>/dev/null \
     && make install \
-    && rm -rf ${SRC_DIR}/swoole*
-
+    && rm -rf ${SRC_DIR}/swoole-*
 
 # -----------------------------------------------------------------------------
 # Install PHP inotify extensions
