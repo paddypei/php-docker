@@ -197,15 +197,15 @@ RUN cd ${SRC_DIR} \
 # -----------------------------------------------------------------------------
 # Install re2c for PHP
 # -----------------------------------------------------------------------------
-RUN cd $SRC_DIR \
-    && wget -q -O re2c-1.0.1.tar.gz https://sourceforge.net/projects/re2c/files/1.0.1/re2c-1.0.1.tar.gz/download \
-    && wget -q -O re2c-1.0.3.tar.gz https://github.com/skvadrik/re2c/releases/download/1.0.3/re2c-1.0.3.tar.gz \
-    && tar xzf re2c-1.0.3.tar.gz \
-    && cd re2c-1.0.3 \
-    && ./configure \
-    && make \
-    && make install \
-    && rm -rf ${SRC_DIR}/re2c*
+#RUN cd $SRC_DIR \
+#    && wget -q -O re2c-1.0.1.tar.gz https://sourceforge.net/projects/re2c/files/1.0.1/re2c-1.0.1.tar.gz/download \
+#    && wget -q -O re2c-1.0.3.tar.gz https://github.com/skvadrik/re2c/releases/download/1.0.3/re2c-1.0.3.tar.gz \
+#    && tar xzf re2c-1.0.3.tar.gz \
+#    && cd re2c-1.0.3 \
+#    && ./configure \
+#    && make \
+#    && make install \
+#    && rm -rf ${SRC_DIR}/re2c*
 
 # -----------------------------------------------------------------------------
 # Install PHP
