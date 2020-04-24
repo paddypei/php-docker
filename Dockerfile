@@ -404,18 +404,19 @@ RUN cd ${SRC_DIR} \
 
 #RUN /vue-msf/php/bin/pecl install swoole_serialize-0.1.1
 
-
-ENV swooleVersion 4.4.12
-RUN cd ${SRC_DIR} \
-    && wget -q -O swoole-${swooleVersion}.tar.gz https://github.com/swoole/swoole-src/archive/v${swooleVersion}.tar.gz \
-    && tar zxf swoole-${swooleVersion}.tar.gz \
-    && cd swoole-src-${swooleVersion}/ \
-    && ${PHP_INSTALL_DIR}/bin/phpize \
-    && ./configure --with-php-config=${PHP_INSTALL_DIR}/bin/php-config --enable-async-redis --enable-openssl --enable-mysqlnd \
-    && make clean 1>/dev/null \
-    && make 1>/dev/null \
-    && make install \
-    && rm -rf ${SRC_DIR}/swoole*
+ ENV SWOOLE_VERSION 4.4.12
+ RUN cd ${SRC_DIR} && \
+  curl -O https://github.com/swoole/swoole-src/archive/v${SWOOLE_VERSION}.tar.gz -L && \
+  tar -zxvf v${SWOOLE_VERSION}.tar.gz && \
+  cd swoole-src-${SWOOLE_VERSION} && \
+  ${PHP_INSTALL_DIR}/bin/phpize && \
+  ./configure \
+  --with-php-config=${PHP_INSTALL_DIR}/bin/php-config \
+  --enable-async-redis \
+  --enable-openssl \
+  --enable-http2  \
+  --enable-mysqlnd && \
+  make clean && make && make install && enable-php-extension swoole && rm -rf ${SRC_DIR}/swoole*
 
 # -----------------------------------------------------------------------------
 # Install PHP inotify extensions
