@@ -155,15 +155,15 @@ RUN cd ${SRC_DIR} \
 # -----------------------------------------------------------------------------
 # Install hiredis
 # -----------------------------------------------------------------------------
-RUN cd ${SRC_DIR} \
-    && wget -q -O hiredis-0.14.0.tar.gz https://github.com/redis/hiredis/archive/v0.14.0.tar.gz \
-    && tar zxvf hiredis-0.14.0.tar.gz \
-    && cd hiredis-0.14.0 \
-    && make \
-    && make install \
-    && echo "/usr/local/lib" > /etc/ld.so.conf.d/local.conf \
-    && ldconfig \
-    && rm -rf $SRC_DIR/hiredis-*
+#RUN cd ${SRC_DIR} \
+#    && wget -q -O hiredis-0.14.0.tar.gz https://github.com/redis/hiredis/archive/v0.14.0.tar.gz \
+#    && tar zxvf hiredis-0.14.0.tar.gz \
+#    && cd hiredis-0.14.0 \
+#    && make \
+#    && make install \
+#    && echo "/usr/local/lib" > /etc/ld.so.conf.d/local.conf \
+#    && ldconfig \
+#    && rm -rf $SRC_DIR/hiredis-*
 
 # -----------------------------------------------------------------------------
 # Install libmemcached using by php-memcached
