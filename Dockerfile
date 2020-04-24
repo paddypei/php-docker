@@ -404,9 +404,10 @@ RUN cd ${SRC_DIR} \
 
 #RUN /vue-msf/php/bin/pecl install swoole_serialize-0.1.1
 
+
 ENV swooleVersion 4.4.12
 RUN cd ${SRC_DIR} \
-    && wget -q -O swoole-${swooleVersion}.tar.gz https://codeload.github.com/swoole/swoole-src/archive/v${swooleVersion}.tar.gz \
+    && wget -q -O swoole-${swooleVersion}.tar.gz https://github.com/swoole/swoole-src/archive/v${swooleVersion}.tar.gz \
     && tar zxf swoole-${swooleVersion}.tar.gz \
     && cd swoole-src-${swooleVersion}/ \
     && ${PHP_INSTALL_DIR}/bin/phpize \
@@ -414,7 +415,7 @@ RUN cd ${SRC_DIR} \
     && make clean 1>/dev/null \
     && make 1>/dev/null \
     && make install \
-    && rm -rf ${SRC_DIR}/swoole-*
+    && rm -rf ${SRC_DIR}/swoole*
 
 # -----------------------------------------------------------------------------
 # Install PHP inotify extensions
