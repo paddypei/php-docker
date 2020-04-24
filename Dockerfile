@@ -1,5 +1,5 @@
 FROM centos:centos7
-MAINTAINER sunny5156 <sunny5156@qq.com>
+MAINTAINER paddy <535768220@qq.com>
 
 # -----------------------------------------------------------------------------
 # Try to fix Centos7 docker Dbus 
