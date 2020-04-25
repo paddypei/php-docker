@@ -416,7 +416,7 @@ RUN cd ${SRC_DIR} \
   --enable-openssl \
   --enable-http2  \
   --enable-mysqlnd && \
-  make clean && make && make install && enable-php-extension swoole && rm -rf ${SRC_DIR}/swoole*
+  make clean && make && make install && enable-php-extension swoole
 
 # -----------------------------------------------------------------------------
 # Install PHP inotify extensions
