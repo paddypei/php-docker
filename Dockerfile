@@ -39,7 +39,7 @@ RUN cd /etc/yum.repos.d \
 # Install Python PIP & Supervisor
 # -----------------------------------------------------------------------------
 RUN cd ${SRC_DIR} \
-	&& curl -s https://pypi.org/simple/pip/ \
+	#&& curl -s https://pypi.org/simple/pip/ \
 	&& yum install -y python-setuptools \
     && yum clean all \
     && easy_install pip \
