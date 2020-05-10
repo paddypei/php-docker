@@ -300,12 +300,12 @@ RUN cd ${SRC_DIR} \
 # Install PHP Rabbitmq extensions
 # -----------------------------------------------------------------------------
 
-RUN cd ${SRC_DIR} \
-	&& wget -q -O rabbitmq-c-0.7.1.tar.gz https://github.com/alanxz/rabbitmq-c/releases/download/v0.7.1/rabbitmq-c-0.7.1.tar.gz \
-	&& tar zxf rabbitmq-c-0.7.1.tar.gz \
-	&& cd rabbitmq-c-0.7.1 \
-	&& ./configure --prefix=/usr/local/rabbitmq-c-0.7.1 \
-	&& make && make install
+#RUN cd ${SRC_DIR} \
+#	&& wget -q -O rabbitmq-c-0.7.1.tar.gz https://github.com/alanxz/rabbitmq-c/releases/download/v0.7.1/rabbitmq-c-0.7.1.tar.gz \
+#	&& tar zxf rabbitmq-c-0.7.1.tar.gz \
+#	&& cd rabbitmq-c-0.7.1 \
+#	&& ./configure --prefix=/usr/local/rabbitmq-c-0.7.1 \
+#	&& make && make install
 
 # -----------------------------------------------------------------------------
 # Install PHP amqp extensions
