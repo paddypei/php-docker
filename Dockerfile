@@ -239,7 +239,7 @@ RUN cd ${SRC_DIR} \
        --enable-sysvmsg \
        --enable-sysvsem \
        --enable-sysvshm \
-       --enable-gd-native-ttf \
+       #--enable-gd-native-ttf \
        --enable-wddx \
        --enable-opcache \
        --with-gettext \
